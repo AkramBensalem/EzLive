@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     kotlin(multiplatform)
     kotlin(cocoapods)
@@ -18,6 +20,11 @@ kotlin {
         compilations.all {
             kotlinOptions.jvmTarget = "11"
         }
+    }
+
+    js(IR) {
+        useCommonJs()
+        browser()
     }
 
 
@@ -84,6 +91,10 @@ kotlin {
             }
 
         }
+
+
+
+        val jsMain by getting
         val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -106,11 +117,30 @@ kotlin {
     }
 }
 
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
 android {
     compileSdk = Versions.compile_sdk
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = Versions.min_sdk
         targetSdk = Versions.target_sdk
+    }
+}
+
+
+// https://youtrack.jetbrains.com/issue/KT-49109
+afterEvaluate {
+    rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class) {
+        rootProject.extensions.configure<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension> {
+            nodeVersion = "16.0.0"
+            versions.webpackDevServer.version = "4.0.0"
+            versions.webpackCli.version = "4.9.0"
+        }
     }
 }
