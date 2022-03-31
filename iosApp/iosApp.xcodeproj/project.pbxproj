@@ -11,6 +11,21 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		4FFD22F617B53F8819B8262A /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96419741673EFC66D73FFD9 /* Pods_iosApp.framework */; };
+		5235B79D27F5C66F00209F5E /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B79C27F5C66F00209F5E /* ObservableValue.swift */; };
+		5235B79F27F5C6E100209F5E /* SimpleRouterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B79E27F5C6E100209F5E /* SimpleRouterState.swift */; };
+		5235B7A527F5C81600209F5E /* SplashUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B7A427F5C81600209F5E /* SplashUI.swift */; };
+		5235B7A727F5CDA900209F5E /* AuthenticationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B7A627F5CDA900209F5E /* AuthenticationUI.swift */; };
+		5235B7A927F5CF3700209F5E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B7A827F5CF3700209F5E /* RootView.swift */; };
+		5235B7B427F6193700209F5E /* merriweather_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7AD27F6192500209F5E /* merriweather_black.ttf */; };
+		5235B7B527F6193B00209F5E /* merriweather_blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7B027F6192600209F5E /* merriweather_blackitalic.ttf */; };
+		5235B7B627F6193E00209F5E /* merriweather_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7B127F6192600209F5E /* merriweather_bold.ttf */; };
+		5235B7B727F6194100209F5E /* merriweather_bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7AF27F6192600209F5E /* merriweather_bolditalic.ttf */; };
+		5235B7B827F6194500209F5E /* merriweather_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7AC27F6192400209F5E /* merriweather_italic.ttf */; };
+		5235B7B927F6194800209F5E /* merriweather_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7AE27F6192500209F5E /* merriweather_light.ttf */; };
+		5235B7BA27F6194B00209F5E /* merriweather_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7B227F6192700209F5E /* merriweather_lightitalic.ttf */; };
+		5235B7BB27F6194D00209F5E /* merriweather_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5235B7B327F6192800209F5E /* merriweather_regular.ttf */; };
+		5235B7BD27F6259200209F5E /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235B7BC27F6259200209F5E /* Delay.swift */; };
+		52F4044127F50BE1008BC81D /* MutableStateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4044027F50BE1008BC81D /* MutableStateBuilder.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +33,21 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		5235B79C27F5C66F00209F5E /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		5235B79E27F5C6E100209F5E /* SimpleRouterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRouterState.swift; sourceTree = "<group>"; };
+		5235B7A427F5C81600209F5E /* SplashUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUI.swift; sourceTree = "<group>"; };
+		5235B7A627F5CDA900209F5E /* AuthenticationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUI.swift; sourceTree = "<group>"; };
+		5235B7A827F5CF3700209F5E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5235B7AC27F6192400209F5E /* merriweather_italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_italic.ttf; sourceTree = "<group>"; };
+		5235B7AD27F6192500209F5E /* merriweather_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_black.ttf; sourceTree = "<group>"; };
+		5235B7AE27F6192500209F5E /* merriweather_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_light.ttf; sourceTree = "<group>"; };
+		5235B7AF27F6192600209F5E /* merriweather_bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_bolditalic.ttf; sourceTree = "<group>"; };
+		5235B7B027F6192600209F5E /* merriweather_blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_blackitalic.ttf; sourceTree = "<group>"; };
+		5235B7B127F6192600209F5E /* merriweather_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_bold.ttf; sourceTree = "<group>"; };
+		5235B7B227F6192700209F5E /* merriweather_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_lightitalic.ttf; sourceTree = "<group>"; };
+		5235B7B327F6192800209F5E /* merriweather_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = merriweather_regular.ttf; sourceTree = "<group>"; };
+		5235B7BC27F6259200209F5E /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		52F4044027F50BE1008BC81D /* MutableStateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableStateBuilder.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +74,6 @@
 				D3ED12368F027F73878F931F /* Pods-iosApp.debug.xcconfig */,
 				FA3141AE46C10810D5C3DA6B /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,10 +115,25 @@
 			isa = PBXGroup;
 			children = (
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
+				5235B7AD27F6192500209F5E /* merriweather_black.ttf */,
+				5235B7B027F6192600209F5E /* merriweather_blackitalic.ttf */,
+				5235B7B127F6192600209F5E /* merriweather_bold.ttf */,
+				5235B7AF27F6192600209F5E /* merriweather_bolditalic.ttf */,
+				5235B7AC27F6192400209F5E /* merriweather_italic.ttf */,
+				5235B7AE27F6192500209F5E /* merriweather_light.ttf */,
+				5235B7B227F6192700209F5E /* merriweather_lightitalic.ttf */,
+				5235B7B327F6192800209F5E /* merriweather_regular.ttf */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				52F4044027F50BE1008BC81D /* MutableStateBuilder.swift */,
+				5235B79C27F5C66F00209F5E /* ObservableValue.swift */,
+				5235B79E27F5C6E100209F5E /* SimpleRouterState.swift */,
+				5235B7A427F5C81600209F5E /* SplashUI.swift */,
+				5235B7A627F5CDA900209F5E /* AuthenticationUI.swift */,
+				5235B7A827F5CF3700209F5E /* RootView.swift */,
+				5235B7BC27F6259200209F5E /* Delay.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -153,8 +197,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5235B7BA27F6194B00209F5E /* merriweather_lightitalic.ttf in Resources */,
+				5235B7B927F6194800209F5E /* merriweather_light.ttf in Resources */,
+				5235B7BB27F6194D00209F5E /* merriweather_regular.ttf in Resources */,
+				5235B7B427F6193700209F5E /* merriweather_black.ttf in Resources */,
+				5235B7B827F6194500209F5E /* merriweather_italic.ttf in Resources */,
+				5235B7B527F6193B00209F5E /* merriweather_blackitalic.ttf in Resources */,
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
+				5235B7B727F6194100209F5E /* merriweather_bolditalic.ttf in Resources */,
+				5235B7B627F6193E00209F5E /* merriweather_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				5235B79F27F5C6E100209F5E /* SimpleRouterState.swift in Sources */,
+				5235B7A527F5C81600209F5E /* SplashUI.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				5235B79D27F5C66F00209F5E /* ObservableValue.swift in Sources */,
+				5235B7A927F5CF3700209F5E /* RootView.swift in Sources */,
+				5235B7BD27F6259200209F5E /* Delay.swift in Sources */,
+				52F4044127F50BE1008BC81D /* MutableStateBuilder.swift in Sources */,
+				5235B7A727F5CDA900209F5E /* AuthenticationUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

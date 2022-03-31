@@ -10,25 +10,24 @@ import androidx.compose.ui.graphics.Color
 @Composable
 fun EzLiveTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
-        darkColors()
-            .copy(
+        darkColors().copy(
                 primary = primaryDarkColor,
                 primaryVariant = primaryLightColor,
                 secondary = secondaryDarkColor,
                 secondaryVariant = secondaryLightColor,
                 onPrimary = Color.White,
                 background = lightGrey,
-                onSurface = lightGrey
+                onSurface = whiteTextColor
             )
     } else {
-        lightColors()
-            .copy(
+        lightColors().copy(
                 primary = primaryColor,
                 primaryVariant = primaryLightColor,
                 secondary = secondaryColor,
                 secondaryVariant = secondaryLightColor,
                 onPrimary = Color.Black,
-                background = Color.White
+                background = Color.White,
+                onSurface = whiteTextColor
             )
     }
     MaterialTheme(

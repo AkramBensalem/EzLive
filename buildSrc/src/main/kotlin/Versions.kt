@@ -26,4 +26,7 @@ object Versions {
     const val serializationJson ="1.3.2"
     const val kermit = "1.0.0"
 
+
+    const val Ktor = "1.6.3"
+
 }

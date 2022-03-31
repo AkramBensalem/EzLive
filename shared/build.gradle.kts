@@ -16,7 +16,7 @@ kotlin {
     iosSimulatorArm64()
 
 
-    jvm("desktop"){
+    jvm("desktop") {
         compilations.all {
             kotlinOptions.jvmTarget = "11"
         }
@@ -28,6 +28,9 @@ kotlin {
     }
 
 
+
+
+
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
@@ -35,18 +38,23 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
+         //   export(project(":shared"))
+           export(Deps.ArkIvanov.Decompose.decompose)
+            export(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
+            export(Deps.ArkIvanov.Essenty.lifecycle)
         }
     }
-    
+
     sourceSets {
         val commonMain by getting {
             dependencies {
-                with(Deps.JetBrain){
+                with(Deps.JetBrain) {
                     implementation(datetime)
                     implementation(serializationJson)
+                    implementation(coroutinesCore)
                 }
 
-                with(Deps.Coroutines){
+                with(Deps.Coroutines) {
                     implementation(core)
                 }
 
@@ -54,13 +62,19 @@ kotlin {
 
                 implementation(Deps.Kermit.kermit)
 
-                with(Deps.Reactive){
+                with(Deps.Reactive) {
                     implementation(annotations)
                     implementation(coroutinesInterop)
                     implementation(reaktive)
                 }
 
                 implementation(Deps.Decompose.core)
+
+
+                implementation(Deps.ArkIvanov.MVIKotlin.mvikotlin)
+                implementation(Deps.ArkIvanov.MVIKotlin.mvikotlinExtensionsReaktive)
+                implementation(Deps.ArkIvanov.MVIKotlin.rx)
+
 
             }
         }
@@ -70,8 +84,8 @@ kotlin {
             }
         }
         val androidMain by getting {
-            dependencies{
-                with(Deps.Decompose){
+            dependencies {
+                with(Deps.Decompose) {
                     implementation(core)
                     implementation(extensionsJetpack)
                     implementation(extensionsAndroid)
@@ -93,7 +107,6 @@ kotlin {
         }
 
 
-
         val jsMain by getting
         val androidTest by getting
         val iosX64Main by getting
@@ -103,16 +116,24 @@ kotlin {
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
-            iosSimulatorArm64Main.dependsOn(this)
+           iosSimulatorArm64Main.dependsOn(this)
+
+            dependencies {
+                api(Deps.ArkIvanov.Decompose.decompose)
+                api(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
+                api(Deps.ArkIvanov.Essenty.lifecycle)
+            }
+
+
         }
         val iosX64Test by getting
         val iosArm64Test by getting
-        val iosSimulatorArm64Test by getting
+       val iosSimulatorArm64Test by getting
         val iosTest by creating {
             dependsOn(commonTest)
             iosX64Test.dependsOn(this)
             iosArm64Test.dependsOn(this)
-            iosSimulatorArm64Test.dependsOn(this)
+           iosSimulatorArm64Test.dependsOn(this)
         }
     }
 }

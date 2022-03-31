@@ -19,6 +19,7 @@ kotlin {
     sourceSets {
         val jvmMain by getting {
             kotlin.srcDirs("src/jvmMain/kotlin")
+
             dependencies {
                 implementation(compose.desktop.currentOs)
                 api(compose.runtime)
@@ -33,19 +34,30 @@ kotlin {
 
                 implementation(project(":shared"))
                 implementation(project(":shared-ui"))
+
+                with(Deps.Decompose){
+                    implementation(core)
+                    implementation(extensionsJetbrains)
+                }
+
             }
         }
     }
 }
 
 compose.desktop {
-    application() {
+    application {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "EzLive"
+            packageVersion = "1.0.0"
             macOS {
                 bundleID = "dz.esi.sba.ezlive"
+            }
+            windows {
+                menuGroup = "EzLive"
+                upgradeUuid = "e50adebf-fbfa-4b9d-9288-0ec8beaf972d"
             }
         }
     }

@@ -7,9 +7,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+
+expect fun Merryweather() : FontFamily
+
 val typography = Typography(
     h1 = TextStyle(
-        fontFamily = FontFamily.SansSerif,
+        fontFamily = Merryweather(),
         fontSize = 24.sp,
         fontWeight = FontWeight.Bold,
         color = Color.White

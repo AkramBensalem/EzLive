@@ -19,6 +19,9 @@ android {
         }
     }
 }
+dependencies {
+    implementation("com.android.volley:volley:1.2.0")
+}
 
 kotlin {
     android()
@@ -33,20 +36,39 @@ kotlin {
             dependencies {
                 implementation(project(":shared"))
 
-                api(compose.foundation)
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material)
-                api(compose.materialIconsExtended)
-                api(compose.ui)
-                api(compose.uiTooling)
+
+                implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+
+                implementation(compose.foundation)
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(compose.materialIconsExtended)
+                implementation(compose.ui)
+
+                with(Deps.Decompose){
+                    api(core)
+                    api(extensionsJetbrains)
+                }
+                with(Deps.Ktor){
+                    api(core)
+                    api(cio)
+                    api(logging)
+                }
+
             }
         }
         val commonTest by getting
         val androidMain by getting {
             dependencies {
+                implementation("io.coil-kt:coil-compose:2.0.0-rc02")
             }
         }
-        val desktopMain by getting
+        val desktopMain by getting {
+            dependencies {
+                implementation("com.squareup.okhttp3:okhttp:4.9.3")
+                implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+            }
+        }
     }
 }

@@ -9,6 +9,7 @@ buildscript {
         classpath(Deps.kotlin_gradle_plugin)
         classpath(Deps.android_gradle_plugin)
         classpath(Deps.kotlin_serialization)
+       // classpath(Deps.KotlinReflect)
     }
 }
 
@@ -20,6 +21,7 @@ allprojects {
         maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-js-wrappers")
         maven(url = "https://jitpack.io")
         maven(url = "https://maven.pkg.jetbrains.space/public/p/kotlinx-coroutines/maven")
+        maven(url = "https://kotlin.bintray.com/ktor")
     }
 }
 
