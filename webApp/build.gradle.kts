@@ -23,13 +23,13 @@ kotlin {
 
     sourceSets {
         val jsMain by getting {
-          //  kotlin.srcDir("src/main/kotlin")
-          //  resources.srcDir("src/main/resources")
-
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
                 implementation(project(":shared"))
+                implementation(Deps.ArkIvanov.Decompose.decompose)
+                implementation(Deps.ArkIvanov.Essenty.lifecycle)
+
             }
         }
     }

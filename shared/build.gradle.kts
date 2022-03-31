@@ -38,8 +38,7 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
-         //   export(project(":shared"))
-           export(Deps.ArkIvanov.Decompose.decompose)
+            export(Deps.ArkIvanov.Decompose.decompose)
             export(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
             export(Deps.ArkIvanov.Essenty.lifecycle)
         }
@@ -107,7 +106,12 @@ kotlin {
         }
 
 
-        val jsMain by getting
+        val jsMain by getting {
+            dependencies {
+                api(Deps.ArkIvanov.Decompose.decompose)
+                api(Deps.ArkIvanov.Essenty.lifecycle)
+            }
+        }
         val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -133,7 +137,7 @@ kotlin {
             dependsOn(commonTest)
             iosX64Test.dependsOn(this)
             iosArm64Test.dependsOn(this)
-           iosSimulatorArm64Test.dependsOn(this)
+            iosSimulatorArm64Test.dependsOn(this)
         }
     }
 }
