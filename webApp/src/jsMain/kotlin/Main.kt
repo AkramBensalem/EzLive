@@ -1,11 +1,12 @@
 import com.arkivanov.decompose.DefaultComponentContext
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
-import dz.esi.sba.ezlive.Greeting
+import com.arkivanov.essenty.lifecycle.resume
 import dz.esi.sba.ezlive.shared.navigation.root.RootComponent
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 import ui.root.RootUI
+import ui.theme.EzLiveStylesheet
 
 
 fun main() {
@@ -14,17 +15,10 @@ fun main() {
      val ctx = DefaultComponentContext(lifecycle = lifecycle)
      val root = RootComponent(ctx)
 
+    lifecycle.resume()
+
     renderComposable(rootElementId = "root") {
-      //  Style(TextStyles)
-
-
-
+        Style(EzLiveStylesheet)
         RootUI(root)
-
-        Div(attrs = { style { padding(16.px) } }) {
-            H2 {
-                Text("Hello ${Greeting().greeting()}")
-            }
-        }
     }
 }
