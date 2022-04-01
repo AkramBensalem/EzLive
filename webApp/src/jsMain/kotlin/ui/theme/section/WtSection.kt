@@ -14,7 +14,7 @@ object WtSections : StyleSheet(EzLiveStylesheet) {
             propertyName = "padding-bottom",
             value = "calc(4*${AppCSSVariables.wtOffsetTopUnit.value(24.px)})"
         )
-        backgroundColor(Color("#fff"))
+        backgroundColor(Color.transparent)
     }
 
     val wtSectionBgGrayLight by style {

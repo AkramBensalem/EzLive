@@ -6,6 +6,28 @@ import ui.theme.EzLiveStylesheet
 
 object WtTexts : StyleSheet(EzLiveStylesheet) {
 
+
+
+    val wtH1 by style {
+        color(AppCSSVariables.wtColorGreyLight.value())
+        fontSize(36.px)
+        letterSpacing((-.5).px)
+        fontWeight(700)
+        lineHeight(40.px)
+
+        media(mediaMaxWidth(640.px)) {
+            self style {
+                AppCSSVariables.wtH2FontSize(24.px)
+                AppCSSVariables.wtH2LineHeight(32.px)
+            }
+        }
+
+        fontFamily("Merriweather", "Gotham SSm A","Gotham SSm B","system-ui","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Droid Sans","Helvetica Neue","Arial", "sans-serif")
+    }
+
+
+
+
     val wtHero by style {
         color(Color("#27282c"))
         fontSize(60.px)

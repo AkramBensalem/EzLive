@@ -55,10 +55,7 @@ object EzLiveStylesheet : StyleSheet() {
 
     init {
         "label, a, button" style {
-            property(
-                "font-family",
-                "system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif"
-            )
+            fontFamily("Merriweather", "Gotham SSm A","Gotham SSm B","system-ui","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Droid Sans","Helvetica Neue","Arial", "sans-serif")
         }
 
         universal style {
@@ -66,11 +63,8 @@ object EzLiveStylesheet : StyleSheet() {
             AppCSSVariables.wtColorGreyDark(Color("#323236"))
 
             AppCSSVariables.surfaceColor(Color("#24314E"))
-
-
             AppCSSVariables.wtOffsetTopUnit(24.px)
-
-            backgroundColor(AppCSSVariables.surfaceColor.value())
+            fontFamily("Merriweather", "Gotham SSm A","Gotham SSm B","system-ui","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Droid Sans","Helvetica Neue","Arial", "sans-serif")
 
             margin(0.px)
         }
@@ -80,6 +74,16 @@ object EzLiveStylesheet : StyleSheet() {
                 AppCSSVariables.wtOffsetTopUnit(16.px)
                 AppCSSVariables.wtFlowUnit(16.px)
             }
+        }
+
+        "body" style {
+            backgroundColor(AppCSSVariables.surfaceColor.value())
+            margin(0.px)
+            height(100.vh)
+            display(DisplayStyle.Flex)
+            alignItems(AlignItems.Center)
+            justifyContent(JustifyContent.Center)
+            fontFamily("Merriweather, sans-serif")
         }
 
         attrContains(
